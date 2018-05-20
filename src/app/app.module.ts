@@ -3,12 +3,13 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
-
+import { UploadFileService } from './upload-file.service';
 import { AppComponent } from './app.component';
 import { ArtComponent } from './art/art.component';
 import { ArtDetailComponent } from './art-detail/art-detail.component';
 import { ArtCreateComponent } from './art-create/art-create.component';
 import { ArtEditComponent } from './art-edit/art-edit.component';
+import { FormUploadComponent } from './form-upload/form-upload.component';
 
 const appRoutes: Routes = [
   {
@@ -42,7 +43,8 @@ const appRoutes: Routes = [
     ArtComponent,
     ArtDetailComponent,
     ArtCreateComponent,
-    ArtEditComponent
+    ArtEditComponent,
+    FormUploadComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +55,7 @@ const appRoutes: Routes = [
       { enableTracing: true } // <-- debugging purposes only
     )
   ],
-  providers: [],
+  providers: [UploadFileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

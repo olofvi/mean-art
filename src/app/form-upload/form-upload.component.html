@@ -1,0 +1,17 @@
+orm-upload.component.html
+
+<label class="btn btn-default">
+  <input type="file" (change)="selectFile($event)">
+</label>
+
+<button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
+1
+2
+3
+4
+5
+<label class="btn btn-default">
+  <input type="file" (change)="selectFile($event)">
+</label>
+
+<button class="btn btn-success" [disabled]="!selectedFiles" (click)="upload()">Upload</button>
