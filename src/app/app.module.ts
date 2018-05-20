@@ -5,44 +5,44 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { BookComponent } from './book/book.component';
-import { BookDetailComponent } from './book-detail/book-detail.component';
-import { BookCreateComponent } from './book-create/book-create.component';
-import { BookEditComponent } from './book-edit/book-edit.component';
+import { ArtComponent } from './art/art.component';
+import { ArtDetailComponent } from './art-detail/art-detail.component';
+import { ArtCreateComponent } from './art-create/art-create.component';
+import { ArtEditComponent } from './art-edit/art-edit.component';
 
 const appRoutes: Routes = [
   {
-    path: 'books',
-    component: BookComponent,
-    data: { title: 'Book List' }
+    path: 'art',
+    component: ArtComponent,
+    data: { title: 'Art List' }
   },
   {
-    path: 'book-details/:id',
-    component: BookDetailComponent,
-    data: { title: 'Book Details' }
+    path: 'art-details/:id',
+    component: ArtDetailComponent,
+    data: { title: 'Art Details' }
   },
   {
-    path: 'book-create',
-    component: BookCreateComponent,
-    data: { title: 'Create Book' }
+    path: 'art-create',
+    component: ArtCreateComponent,
+    data: { title: 'Create Art' }
   },
   {
-    path: 'book-edit/:id',
-    component: BookEditComponent,
-    data: { title: 'Edit Book' }
+    path: 'art-edit/:id',
+    component: ArtEditComponent,
+    data: { title: 'Edit Art' }
   },
   { path: '',
-    redirectTo: '/books',
+    redirectTo: '/art',
     pathMatch: 'full'
   }
 ];
 @NgModule({
   declarations: [
     AppComponent,
-    BookComponent,
-    BookDetailComponent,
-    BookCreateComponent,
-    BookEditComponent
+    ArtComponent,
+    ArtDetailComponent,
+    ArtCreateComponent,
+    ArtEditComponent
   ],
   imports: [
     BrowserModule,
